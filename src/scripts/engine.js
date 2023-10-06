@@ -37,7 +37,7 @@ function openBox() {
 
    // verifica se o vetor openCards tem 2 elementos e chama a função de checkMatch
    if (openCards.length == 2) {
-      setTimeout(checkMatch, 500);
+      setTimeout(checkMatch, 1000);
    }
 }
 
@@ -52,6 +52,8 @@ function checkMatch() {
    if (cards1 === cards2  && openCards[0].id != openCards[1].id) {
       openCards[0].classList.add('boxMatch')
       openCards[1].classList.add('boxMatch')
+      openCards[0].classList.remove('boxOpen')
+      openCards[1].classList.remove('boxOpen')
    } else {
    // Se os cards tiverem o conteúdo diferente eles perdem a classe boxOpen
       openCards[0].classList.remove('boxOpen')
