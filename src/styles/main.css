@@ -2,7 +2,7 @@
 DESENVOLVEDOR: Thales Cardoso
 GITHUB: https://github.com/thalesacardoso
 LINKEDIN: https://www.linkedin.com/in/thalesacardoso/
-DATA: 
+DATA: 06/10/2023
 */
 
 /* IMPORTA O RESET CSS */
@@ -16,16 +16,15 @@ DATA:
    font-family: monospace;
 }
 
-img {
-   max-width: 100%;
-}
-
 body {
-   background-color: #fc1e8a;
+   background-image: url(../images/bg.jpg);
+   background-size: cover;
+   background-repeat: no-repeat;
    display: flex;
    justify-content: center;
    align-items: center;
    min-height: 100vh;
+   user-select: none;
 }
 
 .container {
@@ -36,10 +35,9 @@ body {
    align-items: center;
    gap: 30px;
    background: linear-gradient(325deg,
-         #03001e 0%,
-         #7303c0 30%,
-         #ec38bc 70%,
-         #fdeff9 100%);
+         #39393f 0%,
+         #3838ec 50%,
+         #3e2eed 100%);
    padding: 40px 60px;
 }
 
@@ -63,12 +61,11 @@ h2 {
 }
 
 .reset:focus {
-   color: #ec38bc;
+   color: #00BFFF;
    background-color: #262809;
 }
 
 .game {
-   border: 1px solid white;
    width: 430px;
    height: 430px;
    display: flex;
@@ -79,11 +76,36 @@ h2 {
 }
 
 .item {
+   background-color: #fff;
    position: relative;
    width: 100px;
    height: 100px;
+
    display: flex;
    justify-content: center;
    align-items: center;
-   background-color: #fff;
+
+   font-size: 3rem;
+   transform: rotateY(180deg);
+   transition: 0.5s;
+}
+
+.item::after {
+   content: "";
+   background-color: #404040;
+   position: absolute;
+   inset: 0;
+   transition: 0.5s;
+   transform: rotatey(0deg);
+   backface-visibility: hidden;
+}
+
+.item.boxOpen,
+.item.boxMatch {
+   transform: rotateY(0deg);
+}
+
+.boxOpen::after,
+.boxMatch::after {
+   transform: rotateY(180deg);
 }
