@@ -1,0 +1,25 @@
+/*
+DESENVOLVEDOR: Thales Cardoso
+GITHUB: https://github.com/thalesacardoso
+LINKEDIN: https://www.linkedin.com/in/thalesacardoso/
+DATA: 
+*/
+
+/* IMPORTA O RESET CSS */
+@import url('./reset.css');
+
+/* IMPORTA A FONTE DO GOOGLE */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap');
+
+* {
+   font-size: 16px;
+   font-family: 'Open sans';
+}
+
+img {
+   max-width: 100%;
+}
+
+body {
+   background-color: #add8e6;
+}
