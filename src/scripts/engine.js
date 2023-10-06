@@ -5,3 +5,5 @@ LINKEDIN: https://www.linkedin.com/in/thalesacardoso/
 DATA: 
 */
 
+const emojis = []
+let openCards = []
